@@ -1,0 +1,43 @@
+{
+  "info": {
+    "name": "Arena IA — MCP Server Test",
+    "description": "Collection para testar endpoints de servidores MCP compatíveis com Arena IA",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "tools/list — Listar Ferramentas",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Authorization", "value": "Bearer {{mcp_token}}" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"jsonrpc\": \"2.0\",\n  \"id\": 1,\n  \"method\": \"tools/list\",\n  \"params\": {}\n}"
+        },
+        "url": { "raw": "{{mcp_url}}/mcp" }
+      }
+    },
+    {
+      "name": "tools/call — Executar Ferramenta",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" },
+          { "key": "Authorization", "value": "Bearer {{mcp_token}}" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"jsonrpc\": \"2.0\",\n  \"id\": 2,\n  \"method\": \"tools/call\",\n  \"params\": {\n    \"name\": \"nome_da_ferramenta\",\n    \"arguments\": {\n      \"parametro1\": \"valor1\"\n    }\n  }\n}"
+        },
+        "url": { "raw": "{{mcp_url}}/mcp" }
+      }
+    }
+  ],
+  "variable": [
+    { "key": "mcp_url", "value": "https://seu-servidor-mcp.com" },
+    { "key": "mcp_token", "value": "seu_token_aqui" }
+  ]
+}
