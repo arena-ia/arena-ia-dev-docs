@@ -42,3 +42,32 @@
   "service": "open-cep"
 }
 ```
+
+---
+
+### EN
+
+```json
+[
+  {
+    "type": "function",
+    "function": {
+      "name": "lookup_zip_code",
+      "description": "Looks up the full address from a Brazilian zip code (CEP). Use when the user provides a CEP and wants to know the address. Example input: {\"cep\": \"01310100\"}",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "cep": {
+            "type": "string",
+            "description": "CEP without hyphen or spaces. Example: 01310100"
+          }
+        },
+        "required": ["cep"]
+      }
+    },
+    "_url": "https://brasilapi.com.br/api/cep/v1/",
+    "_method": "GET",
+    "_param_location": "query"
+  }
+]
+```
