@@ -14,6 +14,7 @@ This repository contains technical references, guides and practical examples for
 | MCP Servers | [docs/en/02-mcp-servers.md](docs/en/02-mcp-servers.md) | [docs/pt/02-servidores-mcp.md](docs/pt/02-servidores-mcp.md) |
 | Custom Actions | [docs/en/03-custom-actions.md](docs/en/03-custom-actions.md) | [docs/pt/03-acoes-customizadas.md](docs/pt/03-acoes-customizadas.md) |
 | Changelog Guide | [docs/en/04-changelog-guide.md](docs/en/04-changelog-guide.md) | [docs/pt/04-guia-changelog.md](docs/pt/04-guia-changelog.md) |
+| API Keys | [docs/en/05-api-keys.md](docs/en/05-api-keys.md) | [docs/pt/05-chaves-de-api.md](docs/pt/05-chaves-de-api.md) |
 
 ---
 
