@@ -45,3 +45,11 @@ Define a JSON action block directly inside your custom model and connect to any 
 ## 🤝 Contributing
 
 Found an issue or want to suggest an improvement? Open an [Issue](../../issues) or submit a Pull Request.
+ See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+ ---
+
+ ## 📮 Support
+
+ For platform support (not related to this documentation repo), contact suporte@arena-ia.com.
+ 
