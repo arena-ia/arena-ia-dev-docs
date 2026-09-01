@@ -32,7 +32,8 @@ Define a JSON action block directly inside your custom model and connect to any 
 
 | Example | Type | Description |
 |---|---|---|
-| [Generic MCP Server](examples/mcp-servers/generic-mcp-server.md) | MCP | Minimal MCP server setup |
+| [Official MCP Server (Streamable HTTP)](examples/mcp-servers/official-streamable-http.md) | MCP | Recommended — official transport via an SDK |
+| [Generic MCP Server](examples/mcp-servers/generic-mcp-server.md) | MCP | Minimal setup using the simplified HTTP dialect |
 | [Zapier MCP](examples/mcp-servers/zapier-mcp.md) | MCP | Connecting via Zapier MCP |
 | [CEP Lookup](examples/custom-actions/consulta-cep.md) | Custom Action | Brazilian zip code lookup |
 | [CNPJ Lookup](examples/custom-actions/consulta-cnpj.md) | Custom Action | Brazilian company data lookup |

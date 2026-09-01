@@ -1,6 +1,17 @@
-# Exemplo: Servidor MCP Genérico / Generic MCP Server
+# Exemplo: Servidor MCP Genérico (dialeto simplificado) / Generic MCP Server (simplified dialect)
 
 **Tipo:** Servidor MCP | **Auth:** Bearer Token | **Linguagem:** Node.js
+
+> ℹ️ Este exemplo usa o **dialeto HTTP simplificado da Arena** (`POST /mcp` com `method`/`params`/`id`
+> à mão), útil quando você não pode usar um SDK MCP. Para um servidor novo, prefira o transporte
+> **oficial** — ver [official-streamable-http.md](official-streamable-http.md). Ao cadastrar este
+> servidor, deixe o **Protocolo** em `Auto` (a Arena cai para o dialeto simplificado sozinha) ou
+> force `HTTP simplificado (Arena)`.
+>
+> ℹ️ This example uses Arena's **simplified HTTP dialect** (hand-rolled `POST /mcp` with
+> `method`/`params`/`id`), handy when you can't use an MCP SDK. For a new server, prefer the
+> **official** transport — see [official-streamable-http.md](official-streamable-http.md). When
+> registering, leave **Protocol** on `Auto` or force `Simplified HTTP (Arena)`.
 
 ---
 

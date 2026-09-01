@@ -30,11 +30,13 @@ A plataforma Arena IA permite que empresas contratantes estendam as capacidades 
 
 Ambas as abordagens de saída utilizam function calling — mecanismo pelo qual o modelo de linguagem decide, durante a conversa, quando e como chamar uma ferramenta externa. O resultado retornado pela API é incorporado à resposta da IA de forma transparente para o usuário.
 
-> ⚠️ **Limites de execução:** cada chamada tem um tempo-limite de 15 segundos, e endereços de rede interna (fora dos serviços da própria plataforma) são bloqueados por padrão.
+> ⚠️ **Limites de execução:** chamadas de Ação Customizada têm tempo-limite de 15 segundos; chamadas de ferramenta MCP têm tempo-limite de 30 segundos. Endereços de rede interna (fora dos serviços da própria plataforma) são bloqueados por padrão.
 
 ### Servidores MCP
 
 - Baseado no Model Context Protocol (MCP), padrão aberto mantido pela Anthropic
+- Fala o **transporte oficial** (Streamable HTTP, spec MCP 2025-06-18), com fallback automático para o transporte SSE legado e para o dialeto HTTP simplificado da própria Arena
+- Suporta **OAuth (login por usuário)** além de autenticação estática Bearer/API Key — o SDK cuida da descoberta, do Dynamic Client Registration e do PKCE; um cliente pré-registrado (Client ID/Secret/Scopes) pode ser informado para servidores que não aceitam DCR
 - Configurado pelo administrador da plataforma
 - Disponibiliza múltiplas ferramentas de uma só vez via descoberta automática
 - Escopo: grupo de usuários ou global
