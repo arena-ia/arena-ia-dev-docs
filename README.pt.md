@@ -32,7 +32,8 @@ Defina um bloco JSON de ação diretamente no seu modelo customizado e conecte a
 
 | Exemplo | Tipo | Descrição |
 |---|---|---|
-| [Servidor MCP Genérico](examples/mcp-servers/generic-mcp-server.md) | MCP | Configuração mínima de servidor MCP |
+| [Servidor MCP Oficial (Streamable HTTP)](examples/mcp-servers/official-streamable-http.md) | MCP | Recomendado — transporte oficial via SDK |
+| [Servidor MCP Genérico](examples/mcp-servers/generic-mcp-server.md) | MCP | Configuração mínima usando o dialeto HTTP simplificado |
 | [Zapier MCP](examples/mcp-servers/zapier-mcp.md) | MCP | Conexão via Zapier MCP |
 | [Consulta de CEP](examples/custom-actions/consulta-cep.md) | Ação Customizada | Busca endereço por CEP |
 | [Consulta de CNPJ](examples/custom-actions/consulta-cnpj.md) | Ação Customizada | Busca dados de empresa por CNPJ |

@@ -30,12 +30,14 @@ The Arena IA platform allows contracted companies to extend AI assistant capabil
 
 Both MCP Servers and Custom Model Actions use function calling — the mechanism by which the language model decides, during the conversation, when and how to call an external tool. The API result is incorporated into the AI response transparently.
 
-> ⚠️ **Execution limits:** each function call has a 15-second timeout, and internal network addresses (outside the platform's own services) are blocked by default.
+> ⚠️ **Execution limits:** Custom Action calls have a 15-second timeout; MCP tool calls have a 30-second timeout. Internal network addresses (outside the platform's own services) are blocked by default.
 
 
 ### MCP Servers
 
 - Based on the Model Context Protocol (MCP), an open standard maintained by Anthropic
+- Speaks the **official transport** (Streamable HTTP, MCP spec 2025-06-18), with automatic fallback to the legacy SSE transport and to Arena's own simplified HTTP dialect
+- Supports **OAuth (per-user login)** in addition to static Bearer/API Key auth — the SDK handles discovery, Dynamic Client Registration and PKCE; a pre-registered client (Client ID/Secret/Scopes) can be supplied for servers that don't accept DCR
 - Configured by the platform administrator
 - Expose multiple tools at once via automatic discovery
 - Scope: user group or global

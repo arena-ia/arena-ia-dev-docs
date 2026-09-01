@@ -30,6 +30,18 @@ Authorization: Bearer arena-sk-YOUR_VALUE_HERE
 
 The request body follows the chat completions pattern (`messages`, `model`, `stream`). Check the `curl` example shown on the key creation screen in your own instance for the exact endpoint and full payload format.
 
+### Which `model` to send
+
+| `model` value | Behavior |
+|---|---|
+| `arena_smart.aria` / `aria.base` | Routed through the Aria smart router |
+| A custom model's **name slug** (e.g. `Fiscal Assistant` → `fiscal-assistant`) or its UUID | Uses that custom model's system prompt, temperature and linked knowledge base. The model must be shared with one of the key's groups — access to the custom model *is* the authorization, it doesn't also need to be in `allowed_models` |
+| Any other alias | Passed through to the gateway as-is (must be within the union of the key's `allowed_models`) |
+
+`messages[].content` accepts a plain string or the multimodal array form (`{type:"text"}` / `{type:"image_url"}` / `{type:"file"}`), so a key can send an image or a PDF to a vision-capable model.
+
+> This endpoint is a thin OpenAI-compatible passthrough: no RAG on ad-hoc uploads, no projects, no skills, no `aria.sync` deliberation, and Custom Actions defined on a custom model are **not** executed here.
+
 ## 🛠️ Management
 
 - **Edit**: rename the key or adjust which groups it uses at any time — the secret value itself is never shown again or editable, only the name and linked groups.
